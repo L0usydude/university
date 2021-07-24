@@ -26,27 +26,27 @@ public:
 	
 	void setinfo(std::string namex, std::string surnamex, std::string patronymicx, int yearx, std::string coursex, int numberx, int mark1x, int mark2x, int mark3x, int mark4x, int mark5x);
 
-	string getname();
+	std::string getname()const;
 	
-	string getsurname();
+	std::string getsurname()const;
 	
-	string getpatronymic();
+	std::string getpatronymic()const;
 	
-	string getcourse();
+	std::string getcourse()const;
 	
-	int getyear();
+	int getyear()const;
 	
-	int getynumber();
+	int getynumber()const;
 	
-	int getmark1();
+	int getmark1()const;
 	
-	int getmark2();
+	int getmark2()const;
 	
-	int getmark3();
+	int getmark3()const;
 	
-	int getmark4();
+	int getmark4() const;
 
-	int getmark5();
+	int getmark5() const; 
 
 	student& operator= (const student& asd);
 
@@ -54,5 +54,12 @@ public:
 
 
 };
-std::ostream& operator<<(student& obj, std::ostream& out);
-std::ostream& operator<<(student&& obj, std::ostream& out);
+std::ostream& operator<< (std::ostream& out, student& obj);
+std::ostream& operator<< (std::ostream& out, student&& obj);
+void sort(student* A, int size);
+void elder(student* B, int size);
+void young(student* C, int size);
+double* middle(student* D, int size, int& groupcount);
+double* addend(double* H, int &size, double value,bool param);
+double srznach(const student& K);
+student* findbest(student* A, int size);
